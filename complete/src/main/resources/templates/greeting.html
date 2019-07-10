@@ -11,12 +11,12 @@
 
 
 <body>
-<form id="form2" method="POST">
+<form id="form2" action="#" th:action="@{/greeting}" th:object="${com.cnp.sdk.generate.Sale}"  method="POST">
     <h3>Configuration</h3>
 
     <br>URL:
     <br>
-    <input type="text" name="url" type="url" >
+    <input type="text" th:field="*{id}name="url" type="url" >
     <br>Proxy:
     <br>
     <input type="text" name="proxy">
