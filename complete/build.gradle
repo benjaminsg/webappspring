@@ -32,6 +32,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    compile group: 'com.cnp', name: 'cnp-sdk-for-java', version: '12.7.1'
+    compile(group: 'com.cnp', name: 'cnp-sdk-for-java', version: '12.7.1')
 }
 
