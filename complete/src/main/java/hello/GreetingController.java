@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class GreetingController {
 
-    @GetMapping("/greeting")
+    @GetMapping("/home")
     public String greetingForm(Model model) {
         model.addAttribute("greeting", new Greeting());
         return "greeting";
