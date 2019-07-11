@@ -79,4 +79,125 @@ public class Greeting {
     }
 
     // simpleAuth variable getters and setters
+    public String getAuthReportGroup() {
+        return this.AuthReportGroup;
+    }
+
+    public void setAuthReportGroup(String AuthReportGroup) {
+        this.AuthReportGroup = AuthReportGroup;
+    }
+
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public Long getAuthAmount() {
+        return this.authAmount;
+    }
+
+    public void setAuthAmount(Long authAmount) {
+        this.authAmount = authAmount;
+    }
+
+    public String getAuthOrderSource() {
+        return this.authOrderSource;
+    }
+
+    public void setAuthOrderSource(String authOrderSource) {
+        this.authOrderSource = authOrderSource;
+    }
+
+    public String getExpirationDate() {
+        return this.expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+    public String getAuthId() {
+        return this.authId;
+    }
+
+    public void setAuthId(String authId) {
+        this.authId = authId;
+    }
+
+    public String getCardNumber() {
+        return this.cardNumber;
+    }
+
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public String getCardType() {
+        return this.cardType;
+    }
+
+    public void setCardType(String cardType) {
+        this.cardType = cardType;
+    }
+
+    // simple capture variables getters and setters
+    public String getCaptureReportGroup() {
+        return this.captureReportGroup;
+    }
+
+    public void setCaptureReportGroup(String captureReportGroup) {
+        this.captureReportGroup = captureReportGroup;
+    }
+
+    public String getCnpTxnId() {
+        return this.cnpTxnId;
+    }
+
+    public void setCnpTxnId(String cnpTxnId) {
+        this.cnpTxnId = cnpTxnId;
+    }
+
+    public Long getCaptureAmount() {
+        return this.captureAmount;
+    }
+
+    public void setCaptureAmount(Long captureAmount) {
+        this.captureAmount = captureAmount;
+    }
+
+    public String getPaypalNotes() {
+        return this.paypalNotes;
+    }
+
+    public void setPaypalNotes(String paypalNotes) {
+        this.paypalNotes = paypalNotes;
+    }
+
+    public String getCaptureOrderSource() {
+        return this.captureOrderSource;
+    }
+
+    public void setCaptureOrderSource(String captureOrderSource) {
+        this.captureOrderSource = captureOrderSource;
+    }
+
+    public String getPin() {
+        return this.pin;
+    }
+
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+    public String getCaptureId() {
+        return this.captureId;
+    }
+
+    public void setCaptureId(String captureId) {
+        this.captureId = captureId;
+    }
+
 }
