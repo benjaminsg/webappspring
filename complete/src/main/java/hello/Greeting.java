@@ -1,12 +1,8 @@
 package hello;
 
 import com.cnp.sdk.*;
-
-import static org.junit.Assume.assumeNoException;
-
 import java.util.Properties;
-
-import com.cnp.generate.*;
+import com.cnp.sdk.generate.*;
 
 public class Greeting {
 
@@ -19,7 +15,7 @@ public class Greeting {
     private String merchantId;
 
     // simple auth variables
-    private String AuthReportGroup;
+    private String authReportGroup;
     private String orderId;
     private Long authAmount;
     private String authOrderSource;
@@ -30,7 +26,7 @@ public class Greeting {
 
     // simple capture variables
     private String captureReportGroup;
-    private String cnpTxnId;
+    private Long cnpTxnId;
     private Long captureAmount;
     private String paypalNotes;
     private String captureOrderSource;
@@ -88,11 +84,11 @@ public class Greeting {
 
     // simpleAuth variable getters and setters
     public String getAuthReportGroup() {
-        return this.AuthReportGroup;
+        return this.authReportGroup;
     }
 
-    public void setAuthReportGroup(String AuthReportGroup) {
-        this.AuthReportGroup = AuthReportGroup;
+    public void setAuthReportGroup(String authReportGroup) {
+        this.authReportGroup = authReportGroup;
     }
 
     public String getOrderId() {
@@ -160,11 +156,11 @@ public class Greeting {
         this.captureReportGroup = captureReportGroup;
     }
 
-    public String getCnpTxnId() {
+    public Long getCnpTxnId() {
         return this.cnpTxnId;
     }
 
-    public void setCnpTxnId(String cnpTxnId) {
+    public void setCnpTxnId(Long cnpTxnId) {
         this.cnpTxnId = cnpTxnId;
     }
 
