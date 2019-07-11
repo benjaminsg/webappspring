@@ -1,5 +1,13 @@
 package hello;
 
+import com.cnp.sdk.*;
+
+import static org.junit.Assume.assumeNoException;
+
+import java.util.Properties;
+
+import com.cnp.generate.*;
+
 public class Greeting {
 
     // config variables
@@ -199,5 +207,8 @@ public class Greeting {
     public void setCaptureId(String captureId) {
         this.captureId = captureId;
     }
+
+    // set configuration
+    Properties config = new Properties();
 
 }

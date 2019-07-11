@@ -1,4 +1,4 @@
-<!--
+
 <div class ="jumbotron text-center">
     <h1>Worldpay - Python SDK Web Application</h1>
 </div>
@@ -10,9 +10,8 @@
     <script src="{{url_for('static', filename='scripts.js')}}"></script>
 </head>
 
-<!--
 <body>
-<form id="form2" action="#" th:action="@{/greeting}" method="POST"> 
+<form id="form2" action="#" th:action="@{/greeting}" th:object="${greeting}" method="POST"> 
     <h3>Configuration</h3>
 
     <br>URL:
@@ -131,7 +130,7 @@
 </style>
 </html>
 
--->
+
 
 
 <!--{% if capture %}
@@ -147,7 +146,8 @@
 {% endblock %} -->
 
 -->
- 
+<!--
+
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
@@ -164,3 +164,4 @@
 </body>
 </html>
 
+-->
