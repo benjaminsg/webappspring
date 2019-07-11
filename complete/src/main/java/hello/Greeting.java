@@ -208,7 +208,4 @@ public class Greeting {
         this.captureId = captureId;
     }
 
-    // set configuration
-    Properties config = new Properties();
-
 }
