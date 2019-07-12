@@ -6,7 +6,7 @@ import java.util.Properties;
 import com.cnp.sdk.*;
 import com.cnp.sdk.generate.*;
 
-public class Capture {
+public class ProcessCapture {
     private static CnpOnline cnp;
 
     public void configure(Greeting g) {
@@ -20,20 +20,22 @@ public class Capture {
         cnp = new CnpOnline(config);
     }
 
-    // @BeforeClass
-    public static void beforeClass() throws Exception {
-        cnp = new CnpOnline();
-    }
+    // // @BeforeClass
+    // public static void beforeClass() throws Exception {
+    // cnp = new CnpOnline();
+    // }
 
-    public void simpleCapture() throws Exception {
+    public CaptureResponse simpleCapture(Greeting g) {
         Capture capture = new Capture();
-        capture.setCnpTxnId(123456000L);
-        capture.setAmount(106L);
-        capture.setPayPalNotes("Notes");
-        capture.setId("id");
+
+        capture.setCnpTxnId(g.getCnpTxnId());
+        capture.setAmount(g.getCaptureAmount());
+        capture.setPayPalNotes(g.getPaypalNotes());
+        capture.setId(g.getCaptureId());
 
         CaptureResponse response = cnp.capture(capture);
         // assertEquals("Approved", response.getMessage());
+        return response;
     }
 }
 

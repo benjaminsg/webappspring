@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import com.cnp.sdk.*;
+import com.cnp.sdk.generate.*;
 
 @Controller
 public class GreetingController {
@@ -18,6 +20,9 @@ public class GreetingController {
 
     @PostMapping("/greeting")
     public String greetingSubmit(@ModelAttribute Greeting greeting) {
+        ProcessCapture processCapture = new ProcessCapture();
+        processCapture.configure(greeting);
+        CaptureResponse captureResponse = processCapture.simpleCapture(greeting);
 
         return "result";
     }
