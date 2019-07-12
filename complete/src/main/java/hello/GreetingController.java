@@ -11,7 +11,9 @@ public class GreetingController {
 
     @GetMapping("/home")
     public String greetingForm(Model model) {
-        model.addAttribute("greeting", new Greeting());
+        Greeting greeting = new Greeting();
+        model.addAttribute("greeting", greeting);
+        // model.addAttribute("greeting", new Greeting());
         return "greeting";
     }
 
