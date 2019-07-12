@@ -9,7 +9,8 @@ public class Greeting {
     // config variables
     private String content;
     private String url;
-    private String proxy;
+    private String proxyHost;
+    private String proxyPort;
     private String user;
     private String password;
     private String merchantId;
@@ -48,14 +49,6 @@ public class Greeting {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public String getProxy() {
-        return this.proxy;
-    }
-
-    public void setProxy(String proxy) {
-        this.proxy = proxy;
     }
 
     public String getPassword() {
@@ -204,4 +197,19 @@ public class Greeting {
         this.captureId = captureId;
     }
 
+    public String getProxyHost() {
+        return this.proxyHost;
+    }
+
+    public void setProxyHost(String proxyHost) {
+        this.proxyHost = proxyHost;
+    }
+
+    public String getProxyPort() {
+        return this.proxyPort;
+    }
+
+    public void setProxyPort(String proxyPort) {
+        this.proxyPort = proxyPort;
+    }
 }
