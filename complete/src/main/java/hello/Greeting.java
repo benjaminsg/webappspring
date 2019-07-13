@@ -92,8 +92,8 @@ public class Greeting {
         this.orderId = orderId;
     }
 
-    public Long getAuthAmount() {
-        return Long.parseLong(this.authAmount);
+    public String getAuthAmount() {
+        return this.authAmount;
     }
 
     public void setAuthAmount(String authAmount) {
@@ -149,16 +149,16 @@ public class Greeting {
         this.captureReportGroup = captureReportGroup;
     }
 
-    public Long getCnpTxnId() {
-        return Long.parseLong(this.cnpTxnId);
+    public String getCnpTxnId() {
+        return this.cnpTxnId;
     }
 
     public void setCnpTxnId(String cnpTxnId) {
         this.cnpTxnId = cnpTxnId;
     }
 
-    public Long getCaptureAmount() {
-        return Long.parseLong(this.captureAmount);
+    public String getCaptureAmount() {
+        return this.captureAmount;
     }
 
     public void setCaptureAmount(String captureAmount) {

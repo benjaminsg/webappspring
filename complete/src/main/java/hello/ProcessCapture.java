@@ -28,8 +28,8 @@ public class ProcessCapture {
     public CaptureResponse simpleCapture(Greeting g) {
         Capture capture = new Capture();
 
-        capture.setCnpTxnId(g.getCnpTxnId());
-        capture.setAmount(g.getCaptureAmount());
+        capture.setCnpTxnId(Long.parseLong(g.getCnpTxnId()));
+        capture.setAmount(Long.parseLong(g.getCaptureAmount()));
         capture.setPayPalNotes(g.getPaypalNotes());
         capture.setId(g.getCaptureId());
 
