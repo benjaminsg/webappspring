@@ -27,8 +27,8 @@ public class Greeting {
 
     // simple capture variables
     private String captureReportGroup;
-    private Long cnpTxnId;              //stored as a string for same reason as above, actually a Long
-    private Long captureAmount;         //stored as a string for the same reason as above, actually a Long
+    private String cnpTxnId;              //stored as a string for same reason as above, actually a Long
+    private String captureAmount;         //stored as a string for the same reason as above, actually a Long
     private String paypalNotes;
     private String captureOrderSource;
     private String pin;
