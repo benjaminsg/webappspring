@@ -20,9 +20,9 @@ public class GreetingController {
 
     @PostMapping("/greeting")
     public String greetingSubmit(@ModelAttribute Greeting greeting) {
-        ProcessCapture processCapture = new ProcessCapture();
-        processCapture.configure(greeting);
-        CaptureResponse captureResponse = processCapture.simpleCapture(greeting);
+        //ProcessCapture processCapture = new ProcessCapture();
+        //processCapture.configure(greeting);
+        //CaptureResponse captureResponse = processCapture.simpleCapture(greeting);
 
         return "result";
     }

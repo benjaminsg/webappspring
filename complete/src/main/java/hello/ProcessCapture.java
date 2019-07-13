@@ -12,8 +12,12 @@ public class ProcessCapture {
     public void configure(Greeting g) {
         Properties config = new Properties();
         config.setProperty("url", g.getUrl());
-        config.setProperty("proxyHost", g.getProxyHost());
-        config.setProperty("proxyPort", g.getProxyPort());
+        if(g.getProxyHost() != null){
+            config.setProperty("proxyHost", g.getProxyHost());
+        }
+        if(g.getProxyPort() != null){
+            config.setProperty("proxyPort", g.getProxyPort());
+        }
         config.setProperty("user", g.getUser());
         config.setProperty("password", g.getPassword());
         config.setProperty("merchantId", g.getMerchantId());
