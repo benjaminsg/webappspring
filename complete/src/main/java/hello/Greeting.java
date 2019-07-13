@@ -18,7 +18,7 @@ public class Greeting {
     // simple auth variables
     private String authReportGroup;
     private String orderId;
-    private Long authAmount;
+    private String authAmount;            //stored as a string because opring does not support number as inout type in forms
     private String authOrderSource;
     private String authId;
     private String cardNumber;
@@ -27,8 +27,8 @@ public class Greeting {
 
     // simple capture variables
     private String captureReportGroup;
-    private Long cnpTxnId;
-    private Long captureAmount;
+    private Long cnpTxnId;              //stored as a string for same reason as above, actually a Long
+    private Long captureAmount;         //stored as a string for the same reason as above, actually a Long
     private String paypalNotes;
     private String captureOrderSource;
     private String pin;
@@ -93,10 +93,10 @@ public class Greeting {
     }
 
     public Long getAuthAmount() {
-        return this.authAmount;
+        return Long.parseLong(this.authAmount);
     }
 
-    public void setAuthAmount(Long authAmount) {
+    public void setAuthAmount(String authAmount) {
         this.authAmount = authAmount;
     }
 
@@ -150,18 +150,18 @@ public class Greeting {
     }
 
     public Long getCnpTxnId() {
-        return this.cnpTxnId;
+        return Long.parseLong(this.cnpTxnId);
     }
 
-    public void setCnpTxnId(Long cnpTxnId) {
+    public void setCnpTxnId(String cnpTxnId) {
         this.cnpTxnId = cnpTxnId;
     }
 
     public Long getCaptureAmount() {
-        return this.captureAmount;
+        return Long.parseLong(this.captureAmount);
     }
 
-    public void setCaptureAmount(Long captureAmount) {
+    public void setCaptureAmount(String captureAmount) {
         this.captureAmount = captureAmount;
     }
 
