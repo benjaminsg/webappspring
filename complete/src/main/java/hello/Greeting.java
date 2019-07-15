@@ -18,7 +18,8 @@ public class Greeting {
     // simple auth variables
     private String authReportGroup;
     private String orderId;
-    private String authAmount;            //stored as a string because opring does not support number as inout type in forms
+    private String authAmount; // stored as a string because opring does not support number as inout type in
+                               // forms
     private String authOrderSource;
     private String authId;
     private String cardNumber;
@@ -27,8 +28,8 @@ public class Greeting {
 
     // simple capture variables
     private String captureReportGroup;
-    private String cnpTxnId;              //stored as a string for same reason as above, actually a Long
-    private String captureAmount;         //stored as a string for the same reason as above, actually a Long
+    private String cnpTxnId; // stored as a string for same reason as above, actually a Long
+    private String captureAmount; // stored as a string for the same reason as above, actually a Long
     private String paypalNotes;
     private String captureOrderSource;
     private String pin;

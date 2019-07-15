@@ -1,6 +1,6 @@
 
 <div class ="jumbotron text-center">
-    <h1>Worldpay - Python SDK Web Application</h1>
+    <h1>Worldpay - Java SDK Web Application</h1>
 </div>
 
 <!DOCTYPE html>
@@ -20,6 +20,7 @@
     <br>Proxy Host:
     <br>
     <input type="text" th:field="*{proxyHost}" name="proxyHost">
+    <br>Proxy Port:
     <br>
     <input type="text" th:field="*{proxyPort}" name="proxyPort">
     <br>
@@ -55,19 +56,19 @@
                     <input type="text" th:field="*{orderId}" name="order_id">
                     <br>Amount:
                     <br>
-                    <input type="number" th:field="*{authAmount}" name="auth_amount" >
-                    <br>Order Source
+                    <input type="text" th:field="*{authAmount}" name="auth_amount" >
+                    <br>Order Source:
                     <br>
                     <input type="text" th:field="*{authOrderSource}" name="auth_order_source">
                     <br>ID:
                     <br>
-                    <input type="number" th:field="*{authId}" name="auth_id">
+                    <input type="text" th:field="*{authId}" name="auth_id">
                     <br>Card Number
                     <br>
-                    <input type="number" th:field="*{cardNumber}" name="card_number">
+                    <input type="text" th:field="*{cardNumber}" name="card_number">
                     <br>Expiration Date
                     <br>
-                    <input type="number" th:field="*{expirationDate}" name="exp_date">
+                    <input type="text" th:field="*{expirationDate}" name="exp_date">
                     <br>Card Type
                     <br>
                     <input type="text" th:field="*{cardType}" name="card_type">
@@ -79,10 +80,10 @@
                     <input type="text" th:field="*{captureReportGroup}" name="capture_report_group">
                     <br>CNP Txn ID:
                     <br>
-                    <input type="number" th:field="*{cnpTxnId}" name="cnp_txn_id">
+                    <input type="text" th:field="*{cnpTxnId}" name="cnp_txn_id">
                     <br>Amount:
                     <br>
-                    <input type="number" th:field="*{captureAmount}" name="capture_amount">
+                    <input type="text" th:field="*{captureAmount}" name="capture_amount">
                     <br>Paypal Notes:
                     <br>
                     <input type="text" th:field="*{paypalNotes}" name="paypal_notes">
@@ -91,10 +92,10 @@
                     <input type="text" th:field="*{captureOrderSource}" name="capture_order_source">
                     <br>Pin:
                     <br>
-                    <input type="number" th:field="*{pin}" name="pin">
+                    <input type="text" th:field="*{pin}" name="pin">
                     <br>ID:
                     <br>
-                    <input type="number" th:field="*{captureId}" name="capture_id">
+                    <input type="text" th:field="*{captureId}" name="capture_id">
                     <br>
                 </td>
             </tr>
