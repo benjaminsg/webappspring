@@ -31,8 +31,6 @@ public class Greeting {
     private String cnpTxnId; // stored as a string for same reason as above, actually a Long
     private String captureAmount; // stored as a string for the same reason as above, actually a Long
     private String paypalNotes;
-    private String captureOrderSource;
-    private String pin;
     private String captureId;
 
     // config settings getters and setters
@@ -172,22 +170,6 @@ public class Greeting {
 
     public void setPaypalNotes(String paypalNotes) {
         this.paypalNotes = paypalNotes;
-    }
-
-    public String getCaptureOrderSource() {
-        return this.captureOrderSource;
-    }
-
-    public void setCaptureOrderSource(String captureOrderSource) {
-        this.captureOrderSource = captureOrderSource;
-    }
-
-    public String getPin() {
-        return this.pin;
-    }
-
-    public void setPin(String pin) {
-        this.pin = pin;
     }
 
     public String getCaptureId() {

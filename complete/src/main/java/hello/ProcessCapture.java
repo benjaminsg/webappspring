@@ -1,7 +1,11 @@
 package hello;
 //package com.cnp.sdk.samples;
 
+import java.io.StringWriter;
 import java.util.Properties;
+import javax.xml.bind.*;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.JAXB;
 
 import com.cnp.sdk.*;
 import com.cnp.sdk.generate.*;
@@ -21,6 +25,7 @@ public class ProcessCapture {
         config.setProperty("username", g.getUser());
         config.setProperty("password", g.getPassword());
         config.setProperty("merchantId", g.getMerchantId());
+        // config.setProperty("printxml", "true");
         cnp = new CnpOnline(config);
     }
 
@@ -29,7 +34,7 @@ public class ProcessCapture {
     // cnp = new CnpOnline();
     // }
 
-    public CaptureResponse simpleCapture(Greeting g) {
+    public String simpleCapture(Greeting g) {
         Capture capture = new Capture();
 
         capture.setCnpTxnId(Long.parseLong(g.getCnpTxnId()));
@@ -39,8 +44,10 @@ public class ProcessCapture {
         capture.setReportGroup("Default Report Group");
 
         CaptureResponse response = cnp.capture(capture);
-        // assertEquals("Approved", response.getMessage());
-        return response;
+        StringWriter sw = new StringWriter();
+        JAXB.marshal(response, sw);
+        String responseString = sw.toString();
+        return responseString;
     }
 }
 
