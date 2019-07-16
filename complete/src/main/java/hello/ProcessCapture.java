@@ -36,6 +36,7 @@ public class ProcessCapture {
         capture.setAmount(Long.parseLong(g.getCaptureAmount()));
         capture.setPayPalNotes(g.getPaypalNotes());
         capture.setId(g.getCaptureId());
+        capture.setReportGroup("Default Report Group");
 
         CaptureResponse response = cnp.capture(capture);
         // assertEquals("Approved", response.getMessage());

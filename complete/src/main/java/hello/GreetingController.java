@@ -22,10 +22,8 @@ public class GreetingController {
     public String greetingSubmit(@ModelAttribute Greeting greeting) {
         ProcessCapture processCapture = new ProcessCapture();
         processCapture.configure(greeting);
-        // System.out.println("***************");
-        // System.out.println(greeting.getUrl());
         CaptureResponse captureResponse = processCapture.simpleCapture(greeting);
-
+        System.out.println(captureResponse.getResponse());
         return "result";
     }
 
