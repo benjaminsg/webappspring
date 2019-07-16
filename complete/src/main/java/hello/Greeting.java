@@ -16,10 +16,10 @@ public class Greeting {
     private String merchantId;
 
     // simple auth variables
+    private Boolean authCheck;
     private String authReportGroup;
     private String orderId;
-    private String authAmount; // stored as a string because opring does not support number as inout type in
-                               // forms
+    private String authAmount; // stored as string because no support for number as input type in form
     private String authOrderSource;
     private String authId;
     private String cardNumber;
@@ -27,6 +27,7 @@ public class Greeting {
     private String cardType;
 
     // simple capture variables
+    private Boolean capCheck;
     private String captureReportGroup;
     private String cnpTxnId; // stored as a string for same reason as above, actually a Long
     private String captureAmount; // stored as a string for the same reason as above, actually a Long
@@ -75,6 +76,14 @@ public class Greeting {
     }
 
     // simpleAuth variable getters and setters
+    public Boolean getAuthCheck() {
+        return this.authCheck;
+    }
+
+    public void isAuthCheck(Boolean authCheck) {
+        this.authCheck = authCheck;
+    }
+
     public String getAuthReportGroup() {
         return this.authReportGroup;
     }
@@ -140,6 +149,14 @@ public class Greeting {
     }
 
     // simple capture variables getters and setters
+    public Boolean getCapCheck() {
+        return this.capCheck;
+    }
+
+    public void isCapCheck(Boolean capCheck) {
+        this.capCheck = capCheck;
+    }
+
     public String getCaptureReportGroup() {
         return this.captureReportGroup;
     }

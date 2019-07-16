@@ -3,8 +3,6 @@ package hello;
 
 import java.io.StringWriter;
 import java.util.Properties;
-import javax.xml.bind.*;
-import javax.xml.bind.Marshaller;
 import javax.xml.bind.JAXB;
 
 import com.cnp.sdk.*;
