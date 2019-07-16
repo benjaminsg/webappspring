@@ -12,6 +12,7 @@ import com.cnp.sdk.generate.*;
 
 public class ProcessCapture {
     private static CnpOnline cnp;
+    private String xmlResponse;
 
     public void configure(Greeting g) {
         Properties config = new Properties();
@@ -34,7 +35,7 @@ public class ProcessCapture {
     // cnp = new CnpOnline();
     // }
 
-    public String simpleCapture(Greeting g) {
+    public CaptureResponse simpleCapture(Greeting g) {
         Capture capture = new Capture();
 
         capture.setCnpTxnId(Long.parseLong(g.getCnpTxnId()));
@@ -46,9 +47,22 @@ public class ProcessCapture {
         CaptureResponse response = cnp.capture(capture);
         StringWriter sw = new StringWriter();
         JAXB.marshal(response, sw);
-        String responseString = sw.toString();
-        return responseString;
+        xmlResponse = sw.toString();
+        return response;
     }
+
+    public String toString() {
+        return this.xmlResponse;
+    }
+
+    public String getXmlResponse() {
+        return this.xmlResponse;
+    }
+
+    public void setXmlResponse(String xmlResponse) {
+        this.xmlResponse = xmlResponse;
+    }
+
 }
 
 // instantiate a cnpOnline object using new cnpOnline(config)

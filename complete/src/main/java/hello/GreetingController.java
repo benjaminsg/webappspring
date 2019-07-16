@@ -15,18 +15,16 @@ public class GreetingController {
     public String greetingForm(Model model) {
         Greeting greeting = new Greeting();
         model.addAttribute("greeting", greeting);
-        // CaptureResponse response = new CaptureResponse();
-        String response = "";
-        model.addAttribute("response", response);
+        ProcessCapture processCapture = new ProcessCapture();
+        model.addAttribute("processCapture", processCapture);
         return "greeting";
     }
 
     @PostMapping("/greeting")
-    public String greetingSubmit(@ModelAttribute Greeting greeting, String response) {
-        ProcessCapture processCapture = new ProcessCapture();
+    public String greetingSubmit(@ModelAttribute Greeting greeting, @ModelAttribute ProcessCapture processCapture) {
         processCapture.configure(greeting);
-        response = processCapture.simpleCapture(greeting);
-        System.out.println(response);
+        CaptureResponse response = processCapture.simpleCapture(greeting);
+        System.out.println(processCapture.getXmlResponse());
         return "result";
     }
 
