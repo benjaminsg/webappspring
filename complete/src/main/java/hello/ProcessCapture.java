@@ -80,7 +80,7 @@ public class ProcessCapture {
 
     public String getXmlCaptureResponse() {
         if(this.xmlCaptureResponse == null){
-            return "noCapture";
+            return "No Capture Request Sent";
         }
         return this.xmlCaptureResponse;
     }
@@ -91,7 +91,7 @@ public class ProcessCapture {
 
     public String getXmlAuthResponse() {
         if(this.xmlAuthResponse == null){
-            return "noAuth";
+            return "No Auth Request Sent";
         }
         return this.xmlAuthResponse;
     }
