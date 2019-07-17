@@ -46,7 +46,7 @@
             <tr>
                 <td width="35%">
 
-                    <h3>Simple Auth <input type="checkbox" id="auth_checkbox" name="auth_checkbox"/></h3>
+                    <h3>Simple Auth <input type="checkbox" value="checkbox1" name="checkbox1"/></h3>
                     Report Group:
                     <br>
                     <input type="text" th:field="*{authReportGroup}" name="auth_report_group">
@@ -74,7 +74,7 @@
                     <br />
                 </td>
                 <td width="35%">
-                    <h3>Simple Capture <input type="checkbox" id="capture_checkbox" name="capture_checkbox"/></h3>
+                    <h3>Simple Capture <input type="checkbox" th:field="*{capCheck}" th:value="*{capCheck}" value="captureCheckbox"/></h3>
                     <br>CNP Txn ID:
                     <br>
                     <input type="text" th:field="*{cnpTxnId}" name="cnp_txn_id">

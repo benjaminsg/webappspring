@@ -3,6 +3,7 @@ package hello;
 import com.cnp.sdk.*;
 import com.cnp.sdk.generate.Sale;
 import com.cnp.sdk.generate.*;
+import com.cnp.sdk.generate.MethodOfPaymentTypeEnum;
 public class SampleCnpTxn {
 	public static void main(String[] args) {
 

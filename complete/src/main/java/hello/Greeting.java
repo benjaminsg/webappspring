@@ -27,7 +27,7 @@ public class Greeting {
     private String cardType;
 
     // simple capture variables
-    private Boolean capCheck;
+    private String capCheck;
     private String captureReportGroup;
     private String cnpTxnId; // stored as a string for same reason as above, actually a Long
     private String captureAmount; // stored as a string for the same reason as above, actually a Long
@@ -149,13 +149,13 @@ public class Greeting {
     }
 
     // simple capture variables getters and setters
-    public Boolean getCapCheck() {
+    public String getCapCheck() {
         return this.capCheck;
     }
 
-    public void isCapCheck(Boolean capCheck) {
-        this.capCheck = capCheck;
-    }
+    // public void isCapCheck(Boolean capCheck) {
+    // this.capCheck = capCheck;
+    // }
 
     public String getCaptureReportGroup() {
         return this.captureReportGroup;

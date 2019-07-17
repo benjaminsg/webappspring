@@ -20,11 +20,27 @@ public class GreetingController {
         return "greeting";
     }
 
+    // @PostMapping("/greeting")
+    // public void checkboxCheck(@RequestParam(value = "checkbox1", required=false)) String checkboxValue){
+    //     if(checkboxValue != null){
+    //         System.out.println("checkbox is checked");
+    //     }
+    //     else{
+    //         System.out.println("checkbox is unchecked");
+    //     }
+    // }
+
+
     @PostMapping("/greeting")
     public String greetingSubmit(@ModelAttribute Greeting greeting, @ModelAttribute ProcessCapture processCapture) {
         processCapture.configure(greeting);
-        CaptureResponse response = processCapture.simpleCapture(greeting);
-        System.out.println(processCapture.getXmlResponse());
+        if(greeting.getAuthReportGroup() != null){
+            AuthorizationResponse authResponse = processCapture.simpleAuth(greeting);
+        }
+        if(greeting.getCnpTxnId() != null){
+            CaptureResponse response = processCapture.simpleCapture(greeting);
+        }
+        // System.out.println(processCapture.getXmlResponse());
         return "result";
     }
 

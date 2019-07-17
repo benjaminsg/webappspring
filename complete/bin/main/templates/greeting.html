@@ -74,7 +74,7 @@
                     <br />
                 </td>
                 <td width="35%">
-                    <h3>Simple Capture <input type="checkbox" id="capture_checkbox" name="capture_checkbox"/></h3>
+                    <h3>Simple Capture <input type="checkbox" th:field="*{capCheck}" th:value="*{capCheck}" value="captureCheckbox"/></h3>
                     <br>CNP Txn ID:
                     <br>
                     <input type="text" th:field="*{cnpTxnId}" name="cnp_txn_id">

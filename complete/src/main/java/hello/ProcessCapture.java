@@ -7,10 +7,12 @@ import javax.xml.bind.JAXB;
 
 import com.cnp.sdk.*;
 import com.cnp.sdk.generate.*;
+import com.cnp.sdk.generate.MethodOfPaymentTypeEnum;
 
 public class ProcessCapture {
     private static CnpOnline cnp;
-    private String xmlResponse;
+    private String xmlCaptureResponse;
+    private String xmlAuthResponse;
 
     public void configure(Greeting g) {
         Properties config = new Properties();
@@ -33,6 +35,28 @@ public class ProcessCapture {
     // cnp = new CnpOnline();
     // }
 
+    public AuthorizationResponse simpleAuth(Greeting g) {
+        Authorization authorization = new Authorization();
+        authorization.setReportGroup(g.getAuthReportGroup());
+        authorization.setAmount(Long.parseLong(g.getAuthAmount()));
+        
+        authorization.setOrderSource(OrderSourceType.valueOf(g.getAuthOrderSource().toUpperCase()));
+        authorization.setId(g.getAuthId());
+        CardType card = new CardType();
+
+        card.setNumber(g.getCardNumber());
+        card.setType(MethodOfPaymentTypeEnum.valueOf(g.getCardType().toUpperCase()));
+        card.setExpDate(g.getExpirationDate());
+        authorization.setCard(card);
+
+        AuthorizationResponse response = cnp.authorize(authorization);
+
+        StringWriter sw = new StringWriter();
+        JAXB.marshal(response, sw);
+        this.setXmlAuthResponse(sw.toString());
+        return response;
+    }
+
     public CaptureResponse simpleCapture(Greeting g) {
         Capture capture = new Capture();
 
@@ -45,20 +69,34 @@ public class ProcessCapture {
         CaptureResponse response = cnp.capture(capture);
         StringWriter sw = new StringWriter();
         JAXB.marshal(response, sw);
-        xmlResponse = sw.toString();
+        this.setXmlCaptureResponse(sw.toString());
         return response;
     }
 
     public String toString() {
-        return this.xmlResponse;
+        return this.xmlCaptureResponse;
     }
 
-    public String getXmlResponse() {
-        return this.xmlResponse;
+    public String getXmlCaptureResponse() {
+        if(this.xmlCaptureResponse == null){
+            return " ";
+        }
+        return this.xmlCaptureResponse;
     }
 
-    public void setXmlResponse(String xmlResponse) {
-        this.xmlResponse = xmlResponse;
+    public void setXmlCaptureResponse(String xmlCaptureResponse) {
+        this.xmlCaptureResponse = xmlCaptureResponse;
+    }
+
+    public String getXmlAuthResponse() {
+        if(this.xmlAuthResponse == null){
+            return " ";
+        }
+        return this.xmlAuthResponse;
+    }
+
+    public void setXmlAuthResponse(String xmlAuthResponse) {
+        this.xmlAuthResponse = xmlAuthResponse;
     }
 
 }
