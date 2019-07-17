@@ -34,10 +34,10 @@ public class GreetingController {
     @PostMapping("/greeting")
     public String greetingSubmit(@ModelAttribute Greeting greeting, @ModelAttribute ProcessCapture processCapture) {
         processCapture.configure(greeting);
-        if(greeting.getAuthReportGroup() != null){
+        if(!greeting.getAuthReportGroup().equals("")){
             AuthorizationResponse authResponse = processCapture.simpleAuth(greeting);
         }
-        if(greeting.getCnpTxnId() != null){
+        if(!greeting.getCnpTxnId().equals("")){
             CaptureResponse response = processCapture.simpleCapture(greeting);
         }
         // System.out.println(processCapture.getXmlResponse());

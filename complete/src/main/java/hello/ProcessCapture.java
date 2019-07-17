@@ -26,7 +26,7 @@ public class ProcessCapture {
         config.setProperty("username", g.getUser());
         config.setProperty("password", g.getPassword());
         config.setProperty("merchantId", g.getMerchantId());
-        // config.setProperty("printxml", "true");
+        config.setProperty("printxml", "true");
         cnp = new CnpOnline(config);
     }
 
@@ -41,6 +41,7 @@ public class ProcessCapture {
         authorization.setAmount(Long.parseLong(g.getAuthAmount()));
         
         authorization.setOrderSource(OrderSourceType.valueOf(g.getAuthOrderSource().toUpperCase()));
+        authorization.setOrderId(g.getOrderId());
         authorization.setId(g.getAuthId());
         CardType card = new CardType();
 
