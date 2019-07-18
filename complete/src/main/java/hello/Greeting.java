@@ -7,7 +7,6 @@ import com.cnp.sdk.generate.*;
 public class Greeting {
 
     // config variables
-    private String content;
     private String url;
     private String proxyHost;
     private String proxyPort;
@@ -16,7 +15,6 @@ public class Greeting {
     private String merchantId;
 
     // simple auth variables
-    private Boolean authCheck;
     private String authReportGroup;
     private String orderId;
     private String authAmount; // stored as string because no support for number as input type in form
@@ -27,21 +25,12 @@ public class Greeting {
     private String cardType;
 
     // simple capture variables
-    private String capCheck;
-    private String captureReportGroup;
     private String cnpTxnId; // stored as a string for same reason as above, actually a Long
     private String captureAmount; // stored as a string for the same reason as above, actually a Long
     private String paypalNotes;
     private String captureId;
 
     // config settings getters and setters
-    public String getContent() {
-        return this.content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
 
     public String getUrl() {
         return this.url;
@@ -76,13 +65,6 @@ public class Greeting {
     }
 
     // simpleAuth variable getters and setters
-    public Boolean getAuthCheck() {
-        return this.authCheck;
-    }
-
-    public void isAuthCheck(Boolean authCheck) {
-        this.authCheck = authCheck;
-    }
 
     public String getAuthReportGroup() {
         return this.authReportGroup;
@@ -149,22 +131,7 @@ public class Greeting {
     }
 
     // simple capture variables getters and setters
-    public String getCapCheck() {
-        return this.capCheck;
-    }
-
-    // public void isCapCheck(Boolean capCheck) {
-    // this.capCheck = capCheck;
-    // }
-
-    public String getCaptureReportGroup() {
-        return this.captureReportGroup;
-    }
-
-    public void setCaptureReportGroup(String captureReportGroup) {
-        this.captureReportGroup = captureReportGroup;
-    }
-
+    
     public String getCnpTxnId() {
         return this.cnpTxnId;
     }
