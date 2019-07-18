@@ -40,6 +40,22 @@ public class Greeting {
         this.url = url;
     }
 
+    public String getProxyHost() {
+        return this.proxyHost;
+    }
+
+    public void setProxyHost(String proxyHost) {
+        this.proxyHost = proxyHost;
+    }
+
+    public String getProxyPort() {
+        return this.proxyPort;
+    }
+
+    public void setProxyPort(String proxyPort) {
+        this.proxyPort = proxyPort;
+    }
+
     public String getPassword() {
         return this.password;
     }
@@ -164,19 +180,5 @@ public class Greeting {
         this.captureId = captureId;
     }
 
-    public String getProxyHost() {
-        return this.proxyHost;
-    }
-
-    public void setProxyHost(String proxyHost) {
-        this.proxyHost = proxyHost;
-    }
-
-    public String getProxyPort() {
-        return this.proxyPort;
-    }
-
-    public void setProxyPort(String proxyPort) {
-        this.proxyPort = proxyPort;
-    }
+    
 }
